@@ -80,14 +80,18 @@ function clickOrTouch(event) {
 
 function setTouchPos() {
     genW = Math.round(((mouseX / fullX) * 65) + 3);
+    var lastSpeed = CrossFadeSpeed;
     CrossFadeSpeed = (((mouseY / fullY) * 7)) + 0.2;
     //CrossFadeLFO.frequency.value = (1.75 - ((mouseY / fullY) * 1.75)) + 0.005;
     touchPos.x = mouseX;
     touchPos.y = mouseY;
 
-    if (fadeTween) {
-        fadeTween.stop();
-        //colTween.stop();
+    if (CrossFadeSpeed<lastSpeed) {
+        if (fadeTween) {
+            fadeTween.stop();
+            colTween.stop();
+        }
+        crossFadeTo(CrossFade,CrossFadePolarity,CrossFadeSpeed);
     }
-    crossFadeTo(CrossFade,CrossFadePolarity,CrossFadeSpeed);
+    
 }
