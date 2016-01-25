@@ -3,33 +3,7 @@
  */
 
 var fadeTween;
-
-
-/*function numberTo(osc,par1,par2,i,t) {
-
-    t = t || 1000;
-
-    var nPos = {n:par1[i] };
-    var nTween = new TWEEN.Tween(nPos);
-    nTween.to({ n: par2[i]  }, t*1000);
-    nTween.start();
-
-    nTween.onUpdate(function() {
-        //(function(ind) {
-            par1[i] = this.n;
-            if (i === 0) {
-                osc.partials = par1;
-            }
-        //})(i);
-    });
-    nTween.onComplete(function() {
-        if (i === 0) {
-            genPartials(osc);
-        }
-    });
-    nTween.easing( TWEEN.Easing.Quadratic.InOut );
-}*/
-
+var colTween;
 
 function colourTo(col,r,g,b,a,t) {
 
@@ -71,24 +45,7 @@ function colourToColour(col,col2,t) {
     colTween.easing( TWEEN.Easing.Quadratic.InOut );
 }
 
-function paletteTo(pal1,pal2,t) {
 
-    var length = pal1.length;
-    if (length > pal2.length) {
-        length = pal2.length;
-    }
-    for (var i=0; i<length; i++) {
-        colourToColour(pal1[i],pal2[i],t);
-    }
-}
-
-/*function partialsTo(osc,par1,par2,t) {
-
-    var length = par1.length;
-    for (var j=0; j<length; j++) {
-        numberTo(osc,par1,par2,j,t);
-    }
-}*/
 
 function crossFadeTo(cross,polarity,t) {
     t = t || 1000;

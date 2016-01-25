@@ -43,7 +43,7 @@ var masterCol = new RGBA(-15,10,10,0);
 var highPass = new RGBA(0,0,0,0);
 var lowPass = new RGBA(0,0,0,0);
 
-var colTween;
+
 
 
 

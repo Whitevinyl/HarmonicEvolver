@@ -89,9 +89,11 @@ function setTouchPos() {
     if (CrossFadeSpeed<lastSpeed) {
         if (fadeTween) {
             fadeTween.stop();
+        }
+        if (colTween) {
             colTween.stop();
         }
         crossFadeTo(CrossFade,CrossFadePolarity,CrossFadeSpeed);
     }
-    
+
 }
