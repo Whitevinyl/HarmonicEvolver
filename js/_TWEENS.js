@@ -5,6 +5,7 @@
 var fadeTween;
 var colTween;
 
+
 function colourTo(col,r,g,b,a,t) {
 
     t = t || 1000;
@@ -31,7 +32,7 @@ function colourToColour(col,col2,t) {
 
     var cPos = {red: col.R, green: col.G, blue: col.B, alpha: col.A };
 
-    var colTween = new TWEEN.Tween(cPos);
+    colTween = new TWEEN.Tween(cPos);
     colTween.to({ red: col2.R, green: col2.G, blue: col2.B, alpha: col2.A  }, t*1000);
     colTween.start();
 
@@ -74,11 +75,13 @@ function crossFadeTo(cross,polarity,t) {
         }
         if (polarity===1) {
             Osc[0].partials = partials;
-            colourTo(bgCols[0],(col[1])*255,(col[2])*255,((col[3]+col[4]+col[5])/3)*255,1,CrossFadeSpeed);
+            //colourTo(bgCols[0],(col[1])*255,(col[2])*255,((col[3]+col[4]+col[5])/3)*255,1,CrossFadeSpeed);
+
         } else {
             Osc[1].partials = partials;
-            colourTo(bgCols[0],(col[1])*255,(col[2])*255,((col[3]+col[4]+col[5])/3)*255,1,CrossFadeSpeed);
+            //colourTo(bgCols[0],(col[1])*255,(col[2])*255,((col[3]+col[4]+col[5])/3)*255,1,CrossFadeSpeed);
         }
+        colourToColour(bgCols[0],aCols[currentGen],CrossFadeSpeed);
         CrossFadePolarity = -CrossFadePolarity;
         crossFadeTo(cross,CrossFadePolarity,CrossFadeSpeed);
     });

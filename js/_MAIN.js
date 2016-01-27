@@ -38,8 +38,32 @@ var touchPos;
 
 
 // COLORS //
-var bgCols = [new RGBA(0,10,20,1),new RGBA(255,236,88,1)];
-var masterCol = new RGBA(-15,10,10,0);
+var bgCols = [new RGBA(23,7,36,1),new RGBA(255,236,88,1)];
+var aCols = [
+    new RGBA(230,32,78,1),
+    new RGBA(230,32,78,1),
+    new RGBA(230,32,78,1),
+
+    new RGBA(250,115,97,1),
+    new RGBA(250,115,97,1),
+    new RGBA(250,115,97,1),
+
+    new RGBA(37,204,193,1),
+    new RGBA(37,204,193,1),
+    new RGBA(37,204,193,1),
+
+    new RGBA(86,19,117,1),
+    new RGBA(86,19,117,1),
+    new RGBA(86,19,117,1),
+
+    new RGBA(22,4,36,1),
+    new RGBA(22,4,36,1),
+    new RGBA(22,4,36,1),
+    new RGBA(22,4,36,1),
+    new RGBA(22,4,36,1),
+    new RGBA(22,4,36,1)
+];
+var masterCol = new RGBA(0,0,0,0);
 var highPass = new RGBA(0,0,0,0);
 var lowPass = new RGBA(0,0,0,0);
 

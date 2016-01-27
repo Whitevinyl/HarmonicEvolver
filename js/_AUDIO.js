@@ -32,8 +32,6 @@ function setupAudio() {
     Osc[1].connect(CrossFade.b);
     Osc[1].start();
 
-
-
 }
 
 // TEST TABLES //

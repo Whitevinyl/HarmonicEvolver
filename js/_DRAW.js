@@ -46,6 +46,9 @@ function drawScene() {
     cxa.font = "400 " + midType + "px Cabin";
     cxa.fillText("Harmonic Width: "+genW, 30*units, fullY - (42*units));
     cxa.fillText("Time to Evolve: "+(Math.round(CrossFadeSpeed*10)/10), 30* units, fullY - (30*units));
+
+    cxa.font = "400 " + headerType + "px Cabin";
+    cxa.fillText(""+genNames[currentGen], 30* units, 45*units);
 }
 
 
